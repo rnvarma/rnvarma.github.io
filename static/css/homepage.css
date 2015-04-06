@@ -1,146 +1,62 @@
-html, body {
-	font-family: 'Roboto', sans-serif;
+main, header {
+	padding-left: 240px;
 }
 
-.background-img {
-	width: 100%;
-	height: 100%;
-	background-color: black;
+@media (max-width: 992px) {
+	main, header {
+		padding-left: 0px;
+	}
+	.nav-wrapper {
+		text-align: center;
+	}
+}
+
+a.button-collapse.top-nav {
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  left: -0.5%;
+  top: 1%;
+  float: none;
+  margin-left: 1.5rem;
+  color: #fff;
+  font-size: 32px;
+  z-index: 2;
 }
 
-.main-img {
-	width: 75%;
-	height: auto;
-	border-radius: 600px;
-/*	right: 5%;
-	top: 5%;
-	position: absolute;*/
+a.inactive {
+	color: gray !important;
 }
 
-.main-name {
-	color: white;
-	font-size: 100px;
+li.active {
+	background-color: #b71c1c !important;
 }
 
-.sub-name {
-	font-size: 90px;
-	cursor: pointer;
+li.active a {
+	color: white !important;
 }
 
-@media (max-width: 1300px) {
-  .main-name {
-	font-size: 75px;
-  }
-
-  .sub-name {
-	font-size: 65px;
-  }
-
-}
-@media (max-width: 769px) {
-  .main-name {
-	font-size: 50px;
-	margin-left: 20%;
-  }
-
-  .sub-name {
-	font-size: 40px;
-	margin-left: 20%;
-  }
-
-  .main-img {
-  	width: 100%;
-  }
+.logo-img {
+	height: 52px;
+	margin-top: 6px;
 }
 
-.top-row {
-	margin-top: 5%;
-}
-
-.sections-area {
+.logo-text {
+	font-weight: 800;
 	position: absolute;
-	top:100%;
-	left:0;
-	width: 100%;
-	padding-bottom: 10%;
+	padding-left: 25px;
 }
 
-.section-row {
-	width: 100%;
-	height: 100%;
-	padding-left: 50px;
+.nav-wrapper a.page-title {
+	font-size: 36px;
 }
 
-.section-title {
-	font-size: 800%;
-	font-weight: 600;
+.main-img-card {
+	/*height: 80%;*/
+	margin-top: 10%;
 }
 
-.student-info {
-	font-weight: 300;
-	font-size: 200%;
+.card-image {
+	height: 320px;
 }
-
-.hacker-toc {
-	width: 100%;
-	height: 75%;
-	background-color: white;
-	padding: 15px;
-	overflow: scroll;
-}
-
-.hacker-content {
-	width: 100%;
-	height: 75%;
-}
-
-.asteroids-video {
-	margin-left: 20%;
-}
-
-.judgeme-lg-pic {
-	width: 100%;
-}
-
-.hacker-details {
-	color: white;
-	font-size: 200%;
-	font-weight: 300;
-}
-
-.toc-item {
-	height: 125px;
-	vertical-align: middle;
-	font-size: 200%;
-	font-weight: 300;
-	padding-top: 20px;
-	cursor: pointer;
-}
-
-.toc-item.selected {
-	background-color: #EAEAEA;
-}
-
-.toc-item:hover {
-	background-color: #EAEAEA;
-}
-
-
-.hidden {
-	display: none;
-}
-
-.toc-pic {
-	width: 100%;
-}
-
-
-
-
-
-
-
