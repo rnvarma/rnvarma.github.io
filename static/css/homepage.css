@@ -30,7 +30,7 @@ a.inactive {
 }
 
 li.active {
-	background-color: #b71c1c !important;
+	background-color: #f44336 !important;
 }
 
 li.active a {
@@ -64,4 +64,8 @@ li.active a {
 .main-bio {
 	margin-top: 10%;
 	margin-left: 20px;
+}
+
+.contact-area {
+	margin-top: 25px;
 }
