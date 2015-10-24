@@ -1,0 +1,13 @@
+.collection-item > a{
+  color: black;
+}
+
+.collection-item:hover {
+  background-color: #F44336;
+  cursor: pointer;
+  font-size: 130%;
+}
+
+.collection-item:hover > a{
+  color: white;
+}
