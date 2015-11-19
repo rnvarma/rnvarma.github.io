@@ -1,0 +1,117 @@
+<html>
+  <head>
+
+    <title>Rohan Varma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/guides.css"  media="screen,projection"/>
+    <link href='/static/lib/gfonts.css' rel='stylesheet' type='text/css'>
+    <script src="/static/lib/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    <script src="/static/js/homepage.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/static/css/homepage.css">
+
+  </head>
+
+  <body>
+
+    <header>
+      <ul id="slide-out" class="side-nav fixed">
+        <li class="logo black">
+          <a href="index.html" class="logo-container">
+              <img src="/static/imgs/me-square.png" class="logo-img circle"/> 
+              <span class="logo-text bold" style="color:white">Rohan Varma</span>
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li><a href="/student.html">Student</a></li>
+        <li><a href="/hacker.html">Hacker</a></li>
+        <li><a href="/teacher.html">Teacher</a></li>
+        <li><a href="/coach.html">Coach</a></li>
+        <li><a href="/writer.html">Writer</a></li>
+        <li class="active"><a href="/guides.html">Guides</a></li>
+      </ul>
+      <nav class="top-nav red">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a class="page-title">Rohan Varma</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <!-- Put all your main content here!-->
+      <div class="row" style="margin-top:20px;">
+        <h2 class="center">Intro to Front-End Web Technologies</h2>
+        <div class="col m8 offset-m2 s12 flow-text">
+<p>In this section we will discuss how the internet works. This will help give you a context in which web development happens and also give you some general literacy on the issue.</p>
+
+<h4>Clients and Servers</h4>
+
+Servers and Clients are fundamentally the same thing. They are both just computers that send and receive data. It just so happens that the client is mostly request data and the server is mostly sending data.
+
+Whenever you open a browser and to go Facebook.com, your computer becomes a client. More specifically, the tab in your browser you are on is a client. In fact, your computer is simultaneously multiple clients requesting data from multiple different servers.
+
+<h4>Addresses</h4>
+
+So the question is, how is all of this data movement managed in an organized way? It works the same way that any postal service works. When you want to send a package, you have to specify the address to send it to.
+
+In the physical world address have multiple parts such as the city, street name, and street number. In the internet space addresses are comprised of two parts: IP Addresses and port numbers. An IP Address is a digit, usually in the form of (xxx.xxx.xxx.xxx) which uniquely identifies a computer machine. A port number then further specifies which client on that machine to connect to.
+
+Think of it like airplanes delivering people from one place to another. When a plan takes off, it specifies its destination in two parts. First, the name of the airport it is going to and second, the gate within that airport where it is going. without the gate, it wouldn’t be clear where the plane should dock once it lands. In the same way, without the port number, the data wouldn’t know what client on your computer to go to.
+
+This also means that when we request data from a server, like when we navigate to a URL like facebook.com, we have to specify the address of the server we want data from. It turns out that the URL domain, or the www.facebook.com part of the URL, is actually just a nickname for a long IP address:port number (xxx.xxx.xxx.xxx:8000 for instance). However, since it is hard to remember 20 digits every time you want to go to Facebook, we use these domain names for convenience.
+
+<h4>URL Requests</h4>
+
+So it makes sense that a domain is an address, but when we go to Facebook.com, how do we actually tell them what data we want to get? This is when the stuff in the URL after the domain name comes into play.
+
+facebook.com/profile
+
+We call the stuff after the domain the ‘path’. The path always begins with a ‘/‘, which indicates the home or beginning. You should think of the path as the message of your request to the server. The server, located at the address specified by the domain, will serve you different data based on different paths that you give it. That is why Facebook.com/profile and Facebook.com/newsfeed will show you different pages.
+
+<h4>Types of Data from the Server</h4>
+
+So we keep mentioning that the server sends the client data, but what is that actual data? Data sent from the server comes in many forms, but there are two main groups that you should think of:
+
+Static Content (HTML, CSS, and JavaScript): static content is aptly named because it refers to data sitting in some files on the server that is pre-prepared and ready to be sent. Imagine this as the pre-baked cakes and cookies that sit on the shelfs at bakeries. If you went and asked for a chocolate chip cookie, the baker would just hand you one off the shelf. In the same way, when the client requests HTML, CSS, and JavaScript files, the server simply takes it off the shelf and gives it them.
+Dynamic Content (JSON, HTML): this is the stuff the server has to cook up for you on a per-request basis. This would be a custom cake that you request from the baker which the baker would have to individually prepare. An example of this is individualized HTML pages. Think about your Facebook profile page. It is individual to you, but it also has the same structure to everyone else’s page. It is not the case that Facebook has some poor person sitting in a cave and writing individual HTML pages for each of their 1 billion users. Instead, Facebook has a template for what a profile page looks like, and based on who is requesting it, they dynamically fill in the template and then send over the completed HTML. The key to note here is that this process requires the server to have logic so that it can interface with a database, change the template, and then send the data to the client.
+
+<h4>Using the Data on the Client Side</h4>
+
+So great, we got some HTML from the server and now what? Now the browser takes the HTM, CSS, and JS files and renders them. It uses the HTML to define the structure of the page, the CSS to define the style of the page, and the JS to define how the user interacts with the page.
+
+You might be wondering how the files are rendered by the browser. It turns out that that is not a part of web development for our purposes because the browser handles that itself. It is generally standardized between browsers and so when you write an HTML file, you can safely expect it to work more or less the same in Chrome and in Firefox. However, there are some small details that different browsers handle differently which explains why some websites look or work differently on different browsers.
+
+<h4>Frontend v. Backend</h4>
+
+So now that you know how the web works, you can understand what it means when people say that they are working on the fronted of backend. Generally speaking, the fronted is the stuff that runs on the client browser and the backend is the stuff that runs on the server.
+
+The backend code is the code that makes the server logic. This is usually within some framework such as Django (Python), Rails (Ruby), or Node.js (Javascript). This code manages the URL requests, generates dynamic content, and interfaces with a database if your application requires one.
+
+The fronted code is the code that is run in the browser. This is the HTML, CSS, and JS. It is important to note that while these technologies are run in the browser, they are located as files in the server. However, the server simply sends them statically to the front end and then they are rendered.
+
+So now that you know the way the internet works, lets start our journey into web development by making you a static, personal website. 
+        </div>
+      </div>
+
+    </main>
+
+    <script src="/static/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/iplastic");
+    editor.session.setMode("ace/mode/python");
+    </script>
+  </body>
+
+</html>
