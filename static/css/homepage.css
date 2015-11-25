@@ -1,71 +1,11 @@
-main, header {
-	padding-left: 240px;
+
+
+html {
+  overflow: hidden;
 }
 
-@media (max-width: 992px) {
-	main, header {
-		padding-left: 0px;
-	}
-	.nav-wrapper {
-		text-align: center;
-	}
-}
-
-a.button-collapse.top-nav {
-	position: absolute;
-  text-align: center;
-  height: 48px;
-  width: 48px;
-  left: -0.5%;
-  top: 1%;
-  float: none;
-  margin-left: 1.5rem;
-  color: #fff;
-  font-size: 32px;
-  z-index: 2;
-}
-
-a.inactive {
-	color: gray !important;
-}
-
-li.active {
-	background-color: #f44336 !important;
-}
-
-li.active a {
-	color: white !important;
-}
-
-.logo-img {
-	height: 52px;
-	margin-top: 6px;
-}
-
-.logo-text {
-	font-weight: 800;
-	position: absolute;
-	padding-left: 25px;
-}
-
-.nav-wrapper a.page-title {
-	font-size: 36px;
-}
-
-.main-img-card {
-	/*height: 80%;*/
-	margin-top: 10%;
-}
-
-.card-image.hacker-card-image {
-	height: 320px;
-}
-
-.main-bio {
-	margin-top: 10%;
-	margin-left: 20px;
-}
-
-.contact-area {
-	margin-top: 25px;
+.navbar-li {
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
 }

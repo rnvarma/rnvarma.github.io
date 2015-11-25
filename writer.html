@@ -9,64 +9,52 @@
     <script src="static/lib/jquery.js"></script>
     <script type="text/javascript" src="static/js/materialize.min.js"></script>
     <script src="static/js/homepage.js"></script>
-    <link rel="stylesheet" href="static/css/homepage.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/childpage.css">
 
   </head>
 
   <body>
 
-    <header>
-      <ul id="slide-out" class="side-nav fixed">
-        <li class="logo black">
-          <a href="index.html" class="logo-container">
-              <img src="static/imgs/me-square.png" class="logo-img circle"/> 
-              <span class="logo-text bold" style="color:white">Rohan Varma</span>
-          </a>
-        </li>
-        <div class="divider"></div>
-        <li><a href="student.html">Student</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="hacker.html">Hacker</a></li>
-        <li><a href="teacher.html">Teacher</a></li>
-        <li><a href="coach.html">Coach</a></li>
-        <li class="active"><a href="writer.html">Writer</a></li>
-        <li><a href="guides.html">Guides</a></li>
-      </ul>
-      <nav class="top-nav red">
-        <div class="container">
-          <div class="nav-wrapper">
-            <a class="page-title">Rohan Varma</a>
-          </div>
-        </div>
+    <div class="navbar">
+      <nav class="reset-this">
+          <ul>
+              <a class="navbar-link" href="/">
+                <li class="navbar-li" id="main-logo">
+                  Rohan
+                </li>
+              </a>
+              <a class="navbar-link" href="research.html"><li class="navbar-li">Research</li></a>
+              <a class="navbar-link" href="hacker.html"><li class="navbar-li">Projects</li></a>
+              <a class="navbar-link" href="student.html"><li class="navbar-li">Education</li></a>
+              <a class="navbar-link" href="writer.html"><li class="navbar-li">Writing</li></a>
+            </ul>
       </nav>
-      <div class="container">
-        <a href="#" data-activates="slide-out" class="button-collapse top-nav full">
-          <i class="mdi-navigation-menu"></i>
-        </a>
-      </div>
-    </header>
+    </div>
 
-    <main>
-      <div class="row" style="margin:15px;">
+    <div class="row main-content">
 
-        <div class="col m4 s12">
+      <div class="col m8 offset-m2 s12" id="stories">
+        <div class="writing-block">
           <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/@rohanvarma/60-in-90-8cb598808695">60 pounds in 90 days</a>
         </div>
 
-        <div class="col m4 s12">
+        <div class="writing-block">
           <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/@rohanvarma/the-story-of-joseph-a-north-korean-fugitive-6fe7c3eb515d">The Story of Joseph: A North Korean Fugitive</a>
         </div>
 
-        <div class="col m4 s12">
+        <div class="writing-block">
           <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/@rohanvarma/start-up-v-large-company-27b8276528e4">Start-up v. Large company</a>
         </div>
 
-        <div class="col m4 s12">
+        <div class="writing-block">
           <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/@rohanvarma/als-ice-bucket-challenge-vs-drought-4ec015dad3ae">ALS Ice Bucket Challenge vs. Drought</a>
         </div>
-
+        <div class="writing-block">
+          <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/@rohanvarma/why-self-driving-cars-aren-t-just-for-rich-people-fe43950ba3df">Why Self-Driving Cars Aren’t Just For Rich People</a>
+        </div>
       </div>
-    </main>
+    </div>
 
   </body>
 

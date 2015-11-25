@@ -1,0 +1,31 @@
+.team-area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.person-picture-area {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.person-picture {
+  border-radius: 70px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.person-picture {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px;
+}
+
+.person-name {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 200;
+  font-size: 124%;
+}
