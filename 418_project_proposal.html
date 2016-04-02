@@ -1,0 +1,92 @@
+<html>
+  <head>
+
+    <title>Rohan Varma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="shortcut icon" href="http://faviconist.com/icons/50bd8a10ce1b06f48e58e604e7ef12c7/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+    <link href='/static/lib/gfonts.css' rel='stylesheet' type='text/css'>
+    <script src="static/lib/jquery.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script src="static/js/homepage.js"></script>
+    <script src="static/js/research.js"></script>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/childpage.css">
+    <link rel="stylesheet" href="static/css/research.css">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <nav class="reset-this">
+          <ul>
+            <a class="navbar-link" href="/">
+              <li class="navbar-li" id="main-logo">
+                Rohan
+              </li>
+            </a>
+            <a class="navbar-link" href="online_courses.html"><li class="navbar-li">Courses</li></a>
+            <a class="navbar-link" href="research.html"><li class="navbar-li">Research</li></a>
+            <a class="navbar-link" href="hacker.html"><li class="navbar-li">Projects</li></a>
+            <a class="navbar-link" href="student.html"><li class="navbar-li">Education</li></a>
+            <a class="navbar-link" href="writer.html"><li class="navbar-li">Writing</li></a>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="main-content row">
+      <h2 class="center">Paralell Othello Artificial Intellgence</h2>
+    </div>
+    <div class="row">
+      <div class="col m8 offset-m2 s12 team-area">
+        <div class="person-picture-area">
+          <img class="person-picture" src="static/imgs/me_picture.jpg">
+          <div class="person-name">
+            Rohan Varma
+          </div>
+        </div>
+        <div class="person-picture-area">
+          <img class="person-picture" src="static/imgs/kiran.png">
+          <div class="person-name">
+            Kiran Pandit
+          </div>
+        </div>
+      </div>
+      <div class="col m8 offset-m2 s12">
+        <h4 class="">Summary</h4>
+        <p class="flow-text">We are going to implement a parallel form of a minimax algorithm that uses alpha-beta cutoffs for an AI that plays Othello.</p>
+        <h4 class="">Background</h4>
+        <img src="static/imgs/graph.png">
+        <p class="flow-text">The minimax algorithm is a decision making algorithm, very commonly used in game AIs, to determine the best possible move one player could make. Each of the children of the nodes is all of the possible moves that could follow, and tracks the “score” of that turn, and whether as a whole that branch of moves would be more beneficial or harmful in the long term for the game.</p>
+        <p class="flow-text">Alpha Beta pruning is a method that makes the calculation of this tree faster, as it would obviously increase exponentially. So if a branch will always have a lower score than the best guaranteed score, than the algorithm stops calculating that branch, reducing the size of the tree.</p>
+        <h4>Challenge</h4>
+        <p class="flow-text">The initial thought to parallelize a minimax tree is to assign each of the different initial moves to different threads. However, the issue with this would be that different threads would not have updated information on alpha-beta cutoff values for other threads. The challenge in this project would be implementing a different way of distributing the work, or a clever way of maintaining the cutoff values between threads, or a combination of the two. The workload is compute intensive, and does not require much memory transfer.</p>
+        <h4>Resources</h4>
+        <p class="flow-text">We plan on working on the GHC machines. We will be starting from scratch rather than an existing codebase. Currently, we are using the paper <a href="https://pdfs.semanticscholar.org/04ad/040775ee4208b5babd68e87949409d3a2286.pdf">"Efficiency of Parallel Minimax Algorithm for Game Tree Search" by Plamenka Borovska</a> and Milena Lazarova, for an initial implementation and will try to build off of this to see the effects of various strategies.</p>
+        <h4>Goals and Deliverables</h4>
+        <p class="flow-text">Plan to Achieve</p>
+        <ul>
+          <li>4x speedup utilizing the 4 cores of the GHC machines</li>
+          <li>Comparing the speedup of different alpha beta pruning techniques</li>
+        </ul>
+        <p class="flow-text">Hope to Achieve</p>
+        <ul>
+          <li>Front end web app</li>
+        </ul>
+        <h4>Platform Choice</h4>
+        <p class="flow-text">We will be writing in C++ and testing on the GHC machines. We will be using threads to implement parallelization because the work of calculating the minmax trees different branches is suited to assigning it to different threads. </p>
+        <p class="flow-text">Another reason C++ makes sense is because then we can convert our code into a shared object and call it in a python web server. </p>
+        <h4>Schedule</h4>
+        <p class="flow-text">
+          <b>April 1</b>: Make Othello, implement alpha beta pruning<br>
+          <b>April 18</b>: try 2 different parallelization methods - assigning branches to cores and the partitioning at width approach described by the paper<br>
+          <b>April 25 (week of exam)</b>: test alternatives to alpha beta pruning (such as principal variation search or MTD-f)<br>
+          <b>May 2</b>: test by varying parameters such as number of threads, and depth<br>
+          <b>May 9</b>: make presentation, also a front end webapp
+        </p>
+      </div>
+    </div>
+
+  </body>
+
+</html>
